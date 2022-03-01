@@ -1,3 +1,11 @@
+/*Fonts*/
+
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+/* font-family: 'Courgette', cursive; */
+
+@import url('https://fonts.googleapis.com/css2?family=Battambang:wght@900&display=swap');
+/* font-family: 'Battambang', cursive; */
+
 *{
     margin: 0;
     padding: 0;
@@ -10,17 +18,35 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 4px solid black;
+    font-family: 'Courgette', cursive;
     overflow: hidden;
 }
 
 .title{
-    font-size: 2rem;
+    font-size: 2em;
     height: 40vh;
     width: 100%;
-    border: 2px solid red;
+    font-family: 'Battambang', cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
-
+.title1{
+    font-size: 1.2em;
+}
+.title2{
+    font-size: 1em;
+    font-family: 'Courgette', cursive;
+    font-weight: bolder;
+}
+button{
+    padding: 5px 10px;
+    font-size: 1.5em;
+    margin: 0px 100px;
+    font-family: 'Courgette', cursive;
+    font-weight: bolder;
+}
 .buttons{
     display: flex;
     align-items: center;
@@ -28,12 +54,29 @@
     height: 20vh;
     width: 100%;
     flex-direction: row;
-    border: 2px solid red;
+    
 }
 
 .instruction{
-    border: 2px solid red;
+    
     height: 40vh;
     width: 100%;
-    color: black;
+    color: white;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    padding: 0px 5%;
 }
+
+.container::before{
+    background: url('img.png') no-repeat center center/cover;
+    content:"";
+    position: absolute; 
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 1;
+    }
+    
