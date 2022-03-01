@@ -40,12 +40,19 @@
     font-family: 'Courgette', cursive;
     font-weight: bolder;
 }
-button{
+.btn{
     padding: 5px 10px;
     font-size: 1.5em;
     margin: 0px 100px;
     font-family: 'Courgette', cursive;
     font-weight: bolder;
+    background-color: rgb(0, 244, 244);;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgb(0, 153, 255);
 }
 .buttons{
     display: flex;
@@ -53,8 +60,11 @@ button{
     justify-content: center;
     height: 20vh;
     width: 100%;
-    flex-direction: row;
-    
+    flex-direction: row;    
+}
+.buttons a{
+    text-decoration: none;
+    color: black;
 }
 
 .instruction{
