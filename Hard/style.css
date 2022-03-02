@@ -92,8 +92,8 @@ a{
 }
 
 .box{
-    height: 200px;
-    width:200px;
+    height: 180px;
+    width: 180px;
     /* background-color: aqua; */
     border-radius: 10px;
     margin: 25px;
