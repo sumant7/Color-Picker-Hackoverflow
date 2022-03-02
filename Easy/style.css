@@ -1,4 +1,4 @@
-*{
+*{ 
     margin: 0;
     padding: 0;
 }
@@ -6,7 +6,7 @@
 
 /*Upper Section*/
 .up{
-    height: 25vh;
+    height: 40vh;
     width: 100vw;
     background-color: rgb(70, 140, 255);
     display: flex;
@@ -45,15 +45,18 @@ button{
 }
 
 
+
+
 /*Color Picker Section*/
 .main{
     box-sizing: border-box;
-    height: 70vh;
+    height: 55vh;
     background-color: rgb(41, 38, 38);
     display: grid;
     padding: 10px;
     grid-template-columns: auto auto auto;
     justify-content: center;
+    align-items: center;
 }
 
 .box{

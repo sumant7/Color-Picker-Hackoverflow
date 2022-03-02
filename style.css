@@ -11,6 +11,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+
+
+/* Heading Section */
 .container{
     height: 100vh;
     width: 100vw;
@@ -40,6 +44,10 @@
     font-family: 'Courgette', cursive;
     font-weight: bolder;
 }
+
+
+
+/* Button Section */
 .btn{
     padding: 5px 10px;
     font-size: 1.5em;
@@ -67,6 +75,11 @@
     color: black;
 }
 
+
+
+
+
+/* Instructions Body  */
 .instruction{
     
     height: 40vh;
