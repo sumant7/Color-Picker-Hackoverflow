@@ -11,7 +11,9 @@
     margin: 0;
     padding: 0;
 }
-
+body{
+    transition: all 0.5s;
+}
 
 /*Upper Section*/
 #up{
@@ -63,6 +65,7 @@ button{
     border-color: aliceblue;
     width: 6rem;
     background-color: rgb(255, 102, 0);
+    width: auto;
 }
 button:hover{
     background-color: rgb(230, 102, 0);;
