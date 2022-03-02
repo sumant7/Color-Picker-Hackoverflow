@@ -103,3 +103,20 @@
     opacity: 1;
     }
     
+ /* media queries */
+@media screen and (max-width: 480px) {
+    .title1{
+        font-size: 1.5rem;
+    }
+    .title2{
+        font-size: 1.1rem; 
+    }
+    .btn{
+        font-size: 1rem;
+        padding: 5px;
+        margin: 0px 20px;
+    }
+    .instruction{
+        font-size: 1.2rem;
+    }
+}
