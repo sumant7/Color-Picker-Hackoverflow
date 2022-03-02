@@ -48,6 +48,12 @@
     height: 100%;
     /* background-color: black; */
     margin-right: 10rem;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Courgette', cursive;
+    font-weight: bolder;
 }
 button{
     padding: 5px 5px;
