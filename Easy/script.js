@@ -7,7 +7,7 @@ const instruction = document.getElementById('instruction')
 const message = document.getElementById('message')
 let correct
 let color
-let win 
+let win =0
 
 generate.onclick = function(){   
     win=0
@@ -38,23 +38,52 @@ function randcolor(){  //returns an array with 3 elemets as color code
     return a
 }
 
-
 //option selection part
-const box1 = document.getElementById('box1')
-const box2 = document.getElementById('box2')
-const box3 = document.getElementById('box3')
-
-box1.addEventListener("click", check(1));
-box2.addEventListener("click", check(2));
-box3.addEventListener("click", check(3));
+let box1 = document.getElementById('box1')
+let box2 = document.getElementById('box2')
+let box3 = document.getElementById('box3')
 
 
-function check(i){
-    if(correct==i)
+
+//optimised approach don't know why not working
+// box1.addEventListener("click", check(1));
+// box2.addEventListener("click", check(2));
+// box3.addEventListener("click", check(3));
+
+
+// function check(p){
+//     console.log(69)
+//     if(correct==p)
+//     {
+//         message.innerText = "YOU WIN!"
+//         win=1
+//         box1.style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`
+//         box2.style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`
+//         box3.style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`
+//         up.style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`
+//     }
+//     else
+//     {
+//         if(win!=1)
+//         {
+//             message.innerText = "Try Again"
+//             document.getElementById(`box${p}`).style.backgroundColor = "rgb(41, 38, 38)"
+//         }
+//     }
+// }
+
+
+
+
+
+
+//hardcode
+box1.onclick = function(){
+    console.log(69)
+    if(correct==1)
     {
         message.innerText = "YOU WIN!"
         win=1
-        box1.style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`
         box2.style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`
         box3.style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`
         up.style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`
@@ -68,74 +97,39 @@ function check(i){
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//previous approach(hardcoding)
-// box1.onclick = function(){
-//     console.log(69)
-//     if(correct==1)
-//     {
-//         message.innerText = "YOU WIN!"
-//         win=1
-//         box2.style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`
-//         box3.style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`
-//         up.style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`
-//     }
-//     else
-//     {
-//         if(win!=1)
-//         {
-//             message.innerText = "Try Again"
-//             box1.style.backgroundColor = "rgb(41, 38, 38)"
-//         }
-//     }
-// }
-// box2.onclick = function(){
-//     if(correct==2)
-//     {
-//         message.innerText = "YOU WIN!"
-//         win=1
-//         box1.style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`
-//         box3.style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`
-//         up.style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`
-//     }
-//     else
-//     {
-//         if(win!=1)
-//         {
-//             message.innerText = "Try Again"
-//             box2.style.backgroundColor = "rgb(41, 38, 38)"
-//         }
-//     }
-// }
-// box3.onclick = function(){
-//     if(correct==3)
-//     {
-//         message.innerText = "YOU WIN!"
-//         win=1
-//         box2.style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`
-//         box1.style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`
-//         up.style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`
-//     }
-//     else
-//     {
-//         if(win!=1)
-//         {
-//             message.innerText = "Try Again"
-//             box3.style.backgroundColor = "rgb(41, 38, 38)"
-//         }
-//     }
-// }
+box2.onclick = function(){
+    if(correct==2)
+    {
+        message.innerText = "YOU WIN!"
+        win=1
+        box1.style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`
+        box3.style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`
+        up.style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`
+    }
+    else
+    {
+        if(win!=1)
+        {
+            message.innerText = "Try Again"
+            box2.style.backgroundColor = "rgb(41, 38, 38)"
+        }
+    }
+}
+box3.onclick = function(){
+    if(correct==3)
+    {
+        message.innerText = "YOU WIN!"
+        win=1
+        box2.style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`
+        box1.style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`
+        up.style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`
+    }
+    else
+    {
+        if(win!=1)
+        {
+            message.innerText = "Try Again"
+            box3.style.backgroundColor = "rgb(41, 38, 38)"
+        }
+    }
+}
